@@ -1282,7 +1282,6 @@ class SurveyService {
             if (params.copySurvey.copyDocs) {
                 if ((dctx.owner?.contentType == Doc.CONTENT_TYPE_FILE) && (dctx.status != RDStore.DOC_CTX_STATUS_DELETED)) {
                     Doc clonedContents = new Doc(
-                            status: dctx.owner.status,
                             type: dctx.owner.type,
                             content: dctx.owner.content,
                             uuid: dctx.owner.uuid,
@@ -1310,7 +1309,6 @@ class SurveyService {
             if (params.copySurvey.copyAnnouncements) {
                 if ((dctx.owner?.contentType == Doc.CONTENT_TYPE_STRING) && !(dctx.domain) && (dctx.status != RDStore.DOC_CTX_STATUS_DELETED)) {
                     Doc clonedContents = new Doc(
-                            status: dctx.owner.status,
                             type: dctx.owner.type,
                             content: dctx.owner.content,
                             uuid: dctx.owner.uuid,
